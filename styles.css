@@ -1,0 +1,138 @@
+:root{
+    --font-family: 'Arial', sans-serif;
+    --font-size: 16px;
+}
+
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgb(77, 100, 92);
+    margin: 10px;
+    height: 50px;
+    font-size: 2rem;
+    border:transparent;
+    border-radius: 10px;
+    padding: 10px;   
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%; 
+}
+
+.navbar-item a{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+
+}
+.navbar-item a:hover {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Grid Container Styles */
+.grid-container {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        "first first first"
+        "second second third"
+        "fourth fourth fifth";
+   
+    padding: 2rem;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.grid:nth-child(1) {
+    grid-area: first;
+    background-color: #e76f51;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.grid:nth-child(2) {
+    grid-area: second;
+    background-color: #2a9d8f;
+    color: white;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    height: 100vh;
+}
+
+.grid:nth-child(3) {
+    grid-area: third;
+    background-color: #264653;
+    color: white;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.grid:nth-child(4) {
+    grid-area: fourth;
+    background-color: #f4a261;
+    color: white;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.grid:nth-child(5) {
+    grid-area: fifth;
+    background-color: #e9c46a;
+    color: white;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.footer{
+    text-align: center;
+    text-decoration:underline;
+    font-style: italic;
+    font-size: 1.2rem;
+
+}
+
+@media  (max-width: 768px){
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar-items {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(77, 100, 92);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    }
+
+    .navbar-items.active {
+        display: flex;
+    }
+
+    .navbar-item {
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+
+    
+}
